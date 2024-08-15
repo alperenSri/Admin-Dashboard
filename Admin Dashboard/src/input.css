@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .adjust_size{
+        @apply text-xs xsm:text-base;
+    }
+}
+
+@layer components{
+    .sign-up-link{
+        @apply text-blue-900 hover:underline font-bold;
+    }
+}

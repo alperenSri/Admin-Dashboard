@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // JavaScript function to validate form and redirect
+    function validateAndRedirect(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get input field values
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      
+      // Check if fields are filled
+      if (email && password) {
+        // Both fields are filled, redirect to index.html
+        window.location.href = "index.html";
+      } else {
+        // Show alert if fields are not filled
+        alert("Please fill in both fields.");
+      }
+    }
+  </script>
+</head>
+<body class="sm:bg-gray-400 bg-gray-600 w-full sm:px-10 pb-4 flex justify-center">
+
+  <div class="w-auto h-auto bg-gray-600 flex md:mt-32 mt-14 rounded-lg">
+    <div class="w-full h-auto flex flex-wrap justify-center my-5">
+      <div class="w-1/2 md:text-3xl text-2xl text-white text-center">
+        Log in
+      </div> 
+      <form action="" class="flex flex-wrap w-full sm:my-20 my-10" onsubmit="validateAndRedirect(event)">
+        <div class="w-full flex justify-center my-10 flex-wrap">
+          <div class="sm:w-7/12 w-8/12 my-2 text-white px-1">Enter your email address:</div>
+          <input id="email" type="text" placeholder="username@gmail.com" class="sm:w-7/12 w-8/12 h-10 p-2 rounded-md border-2 hover:border-black">
+        </div>
+        <div class="w-full flex justify-center my-10 flex-wrap">
+          <div class="sm:w-7/12 w-8/12 my-2 text-white px-1">Enter your password:</div>
+          <input id="password" type="text" placeholder="yourPassword.." class="sm:w-7/12 w-8/12 h-10 p-2 rounded-md border-2 hover:border-black">
+        </div>
+        <div class="w-full flex justify-center my-10">
+          <button type="submit" class="w-24 h-12 rounded-lg bg-gray-800 hover:bg-gray-500 text-white flex items-center justify-center ">
+            Log in
+          </button>
+        </div>
+      </form>
+      <div class="w-9/12 font-semibold px-2 text-center">
+        Are you new?
+        <a href="sign_up.html" class="sign-up-link">Sign up</a>
+        instead.
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
